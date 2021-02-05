@@ -30,7 +30,7 @@ const Hero = () => {
               </Button>
             </Grid>
             <Grid item>
-              <Button variant="outlined" color="primary">
+              <Button variant="outlined">
                 Secondary action
               </Button>
             </Grid>

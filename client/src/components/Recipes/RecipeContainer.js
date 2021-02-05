@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import SearchBar from "material-ui-search-bar";
 
 import useStyles from './styles.js';
 import RecipeCard from './Recipe/RecipeCard.js';
@@ -13,13 +14,16 @@ const RecipeContainer = () => {
   const classes = useStyles();
 
   return (
-    <Container className={classes.cardGrid} maxWidth="md">
-      <Grid container spacing={4}>
-        {recipes.map((recipe) => (
-          <RecipeCard recipe={recipe} />
-        ))}
-      </Grid>
-    </Container>
+    <Fragment>
+      <Container className={classes.cardGrid} maxWidth="md">
+        <SearchBar className={classes.searchBar} />
+        <Grid container spacing={4}>
+          {recipes.map((recipe) => (
+            <RecipeCard recipe={recipe} />
+          ))}
+        </Grid>
+        </Container>
+    </Fragment>
   );
 };
 
